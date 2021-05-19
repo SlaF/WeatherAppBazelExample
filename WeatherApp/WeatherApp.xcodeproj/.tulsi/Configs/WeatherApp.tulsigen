@@ -1,0 +1,29 @@
+{
+  "additionalFilePaths" : [
+    "WeatherApp/BUILD"
+  ],
+  "buildTargets" : [
+    "//WeatherApp:WeatherApp"
+  ],
+  "optionSet" : {
+
+  },
+  "projectName" : "WeatherApp",
+  "sourceFilters" : [
+    "WeatherApp/...",
+    "WeatherApp/Carthage",
+    "WeatherApp/Carthage/Build",
+    "WeatherApp/Carthage/Build/Alamofire.xcframework",
+    "WeatherApp/Carthage/Build/Alamofire.xcframework/ios-arm64_i386_x86_64-simulator",
+    "WeatherApp/Carthage/Build/Kingfisher.xcframework",
+    "WeatherApp/Carthage/Build/Kingfisher.xcframework/ios-arm64_i386_x86_64-simulator",
+    "WeatherApp/WeatherApp",
+    "WeatherApp/WeatherApp/Base.lproj",
+    "WeatherApp/WeatherApp/Localisation",
+    "WeatherApp/WeatherApp/Localisation/en.lproj",
+    "WeatherApp/WeatherApp/Localisation/ru.lproj",
+    "WeatherApp/WeatherApp/ViewModels",
+    "WeatherApp/WeatherApp/Views",
+    "WeatherApp/WeatherApp/Weather"
+  ]
+}

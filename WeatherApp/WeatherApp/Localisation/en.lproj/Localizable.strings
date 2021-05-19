@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  CombinedWeatherApp
+
+  Created by Vyacheslav Redkin on 27.04.2021.
+  Copyright © 2021 Ray Wenderlich. All rights reserved.
+*/
+
+"Welcome" = "Welcome";
