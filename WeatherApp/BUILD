@@ -30,20 +30,23 @@ filegroup(
     srcs = glob(["WeatherApp/Localisation/*.lproj/*.strings"]),
 )
 
-apple_dynamic_xcframework_import(
-  name = "Kingfisher"
-)
+#apple_dynamic_xcframework_import(
+#  name = "Kingfisher"
+#)
 
-apple_dynamic_xcframework_import(
-  name = "Alamofire"
-)
+#apple_dynamic_xcframework_import(
+#  name = "Alamofire"
+#)
 
 swift_library(
     name = "WeatherAppSources",
     srcs = glob(
-        ["WeatherApp/**/*.swift"]
+        [
+            "WeatherApp/**/*.swift"
+        ]
     ),
-    deps = [":Kingfisher", ":Alamofire"],
+    deps = ["@swift_pkgs//SwiftyJSON:SwiftyJSON"],
+    visibility = ["//swift:__subpackages__"],
     module_name = "WeatherApp"
 )
 
@@ -54,7 +57,9 @@ ios_application(
     infoplists = ["WeatherApp/Info.plist"],
     minimum_os_version = "13.0",
     launch_storyboard = "WeatherApp/Base.lproj/LaunchScreen.storyboard",
-    deps = [":WeatherAppSources"],
+    deps = [
+        ":WeatherAppSources"
+    ],
     frameworks = ["@//NetworkKit:NetworkKit"],
     app_icons = glob(["WeatherApp/Assets.xcassets/AppIcon.appiconset/*"]),
     strings = [":localized_strings"]

@@ -13,10 +13,10 @@ def apple_dynamic_xcframework_import(name, **kwargs):
     apple_dynamic_framework_import(
         name = name,
         framework_imports = select({
-            "@build_bazel_rules_apple//apple:ios_x86_64": native.glob([
-                 simulator_framework_path,
+            "@build_bazel_rules_apple//apple:ios_sim_arm64": native.glob(include=[
+                 simulator_framework_path
             ]),
-            "@build_bazel_rules_apple//apple:ios_arm64": native.glob([
+            "@build_bazel_rules_apple//apple:ios_arm64": native.glob(include=[
                  device_framework_path
             ])
         }),

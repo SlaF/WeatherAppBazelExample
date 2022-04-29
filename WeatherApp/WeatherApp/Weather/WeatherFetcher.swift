@@ -7,8 +7,7 @@
 
 import Foundation
 import Combine
-import Alamofire
-import Kingfisher
+// import Alamofire
 
 struct OpenWeatherAPI {
     static let scheme = "https"
